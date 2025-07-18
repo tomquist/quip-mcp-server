@@ -63,8 +63,9 @@ This MCP server acts as a bridge between Claude and Quip documents. It works by:
 
 ## Docker
 
-The provided `Dockerfile` uses Node.js 20 with a slim runtime image and installs
-Python along with the `quip` library. Build the container image and run it with
+The included `Dockerfile` builds the MCP using Node.js 20 and a slim runtime.
+It also installs Python and the `quip` library required by the server. To
+install and run the MCP via Docker, build the image and start a container with
 your Quip credentials:
 
 ```bash
