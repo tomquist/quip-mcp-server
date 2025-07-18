@@ -76,6 +76,27 @@ docker run --rm \
   quip-mcp-server
 ```
 
+To configure your MCP to launch the server via Docker, reference the built
+image in your `mcpServers` settings:
+
+```json
+{
+  "mcpServers": {
+    "quip": {
+      "command": "docker",
+      "args": [
+        "run", "--rm",
+        "-e", "QUIP_ACCESS_TOKEN=your-quip-access-token",
+        "-e", "QUIP_BASE_URL=https://platform.quip.com",
+        "quip-mcp-server"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
 ## Usage
 
 Once connected, the following MCP tools become available to Claude:
